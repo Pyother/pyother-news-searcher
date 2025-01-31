@@ -1,10 +1,9 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      Uuu
-    </div>
-  );
+const Home = () => {
+    return (
+        <div>
+            Uuuuuu
+        </div>
+    )
 }
+
+export default Home;
