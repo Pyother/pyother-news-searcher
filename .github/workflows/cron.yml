@@ -16,6 +16,6 @@ jobs:
         
       - name: Send response via POST
         run: |
-          curl -X POST "https://main.d1vajphj1n3pfj.amplifyapp.com/api/newsdata/overall"
+          curl -X POST "https://main.d1vajphj1n3pfj.amplifyapp.com/api/newsdata/overall" \
           -H "Content-Type: application/json" \
-          -d "$GITHUB_ENV
+          -d "$response"
