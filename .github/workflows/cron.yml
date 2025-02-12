@@ -2,7 +2,7 @@ name: Run Cron Job
 
 on: 
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/8 * * * *'
 
 jobs: 
   run-cron:
@@ -11,9 +11,10 @@ jobs:
       - name: Call API and save response
         id: fetch_data
         run: | 
-          RESPONSE=$(curl -s "https://main.d1vajphj1n3pfj.amplifyapp.com/api/newsdata/intermilan" | jq -c .)
+          RESPONSE=$(curl -s "https://main.d1vajphj1n3pfj.amplifyapp.com/api/newsdata/intermilan")
+          echo RESPONSE
           curl -X POST "https://main.d1vajphj1n3pfj.amplifyapp.com/api/newsdata/overall" \
-          -H "Content-Type: application/json" \
-          -d "$RESPONSE"
+              -H "Content-Type: application/json" \
+              -d "$RESPONSE"
 
         
