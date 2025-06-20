@@ -1,15 +1,30 @@
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
+    /* Palette: */
     --color-bg-primary: #ffffff;
-    --color-bg-secondary: #f0f0f0;
+    --color-bg-secondary: #f8f9fd;
     --color-text-primary: #171717;
     --color-text-secondary: #4d4d4d;
     --color-accent: #0070f3;
+
+    --color-bg-primary-dark: #171717;
+    --color-bg-secondary-dark: #222222;
+    --color-text-primary-dark: #ffffff;
+    --color-text-secondary-dark: #b3b3b3;
+
+    /* Layout: */
+    --spacing: 1rem;
+
+    /* Text: */
 }
 
-
-body {
-    margin: 0;
-    padding: 0;
+@layer base {
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
 }
