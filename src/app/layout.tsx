@@ -34,8 +34,9 @@ export default function RootLayout({
         <html lang="en" className={poppins.className}>
             <body className={theme}>
                 <ThemeContext.Provider value={theme}>
-                    <div className="flex flex-col min-h-screen bg-[var(--color-bg-primary)] dark:bg-[var(--color-bg-primary-dark)] text-[var(--color-text-primary)] dark:text-[var(--color-text-primary-dark)]">
+                    <div className="flex flex-col min-h-screen">
                         <Header 
+                            theme={theme}
                             toggleTheme={() => setTheme(prev => prev === 'light' ? 'dark' : 'light')}
                         />
                         <Content >

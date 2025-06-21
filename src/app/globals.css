@@ -5,15 +5,16 @@
 :root {
     /* Palette: */
     --color-bg-primary: #ffffff;
-    --color-bg-secondary: #f8f9fd;
+    --color-bg-secondary: #e9ebf4;
     --color-text-primary: #171717;
     --color-text-secondary: #4d4d4d;
-    --color-accent: #0070f3;
 
     --color-bg-primary-dark: #171717;
     --color-bg-secondary-dark: #222222;
     --color-text-primary-dark: #ffffff;
     --color-text-secondary-dark: #b3b3b3;
+
+    --color-accent: #0070f3;
 
     /* Layout: */
     --spacing: 1rem;
@@ -26,5 +27,35 @@
         margin: 0;
         padding: 0;
         height: 100%;
+
+        font-size: 14px;
+
+        color: var(--color-text-primary);
+        background-color: var(--color-bg-primary);
+
+        transition: all 0.3s ease-in-out;
+
+        @variant dark {
+            color: var(--color-text-primary-dark);
+            background-color: var(--color-bg-primary-dark);
+        }
     }
 }
+
+@layer components {
+    .container {
+        width: 100%;
+        padding: var(--spacing);
+    }
+    .icon-button {
+        font-size: 20px;
+        padding: calc(var(--spacing) / 2);
+        border-radius: calc(var(--spacing) / 2);
+        background-color: var(--color-bg-secondary);
+
+        @variant dark {
+            background-color: var(--color-bg-secondary-dark);
+        }
+    }
+}
+
